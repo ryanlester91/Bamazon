@@ -60,10 +60,17 @@ var connection = mysql.createConnection({
             filter:Number
         
 
-      }]).then(function(answers) {
-          var quantityChosen = answers.Quantity;
-          var IDrequested = answers.ID;
-          purchaseOrder(IDrequested, quantityChosen);
+          }]).then(function(answers) {
+            var quantityChosen = answers.Quantity;
+            var IDrequested = answers.ID;
+            
+            if(IDrequested < 1 || IDrequested > 10) {
+              console.log("ID does not exist. Please try again.");
+              purchaseProduct();
+            }
+            else {
+              purchaseOrder(IDrequested, quantityChosen);
+            }
 
 });
   };

@@ -57,7 +57,15 @@ var connection = mysql.createConnection({
       }]).then(function(answers) {
           var quantityChosen = answers.Quantity;
           var IDrequested = answers.ID;
-          purchaseOrder(IDrequested, quantityChosen);
+          
+          if(IDrequested < 1 || IDrequested > 10) {
+            console.log("ID does not exist. Please try again.");
+            purchaseProduct();
+          }
+          else {
+            purchaseOrder(IDrequested, quantityChosen);
+          }
+          
 
 });
   };

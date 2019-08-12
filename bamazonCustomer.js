@@ -5,7 +5,7 @@ var Table = require("cli-table");
 //Require and configure dotenv.
 require('dotenv').config()
 
-var fs = require("fs");
+
 var keys = require("./keys.js");
 
 var connection = mysql.createConnection({

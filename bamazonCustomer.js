@@ -83,9 +83,12 @@ var connection = mysql.createConnection({
       console.log("Good news! Your order is in stock!");
       console.log("--------------------------------------");
       console.log("Your total cost for " + amtNeeded + "" + res[0].product_name + " is " + totalCost + ". Thank you!");
+      console.log("Thank you for shopping with us");
 
-      connection.query("UPDATE products SET stock_quantity = stock_quantity - " + amtNeeded + "WHERE item_id = ?");
+      connection.query("UPDATE products SET stock_quantity = stock_quantity - " + amtNeeded + "WHERE item_id = " + ID);
     
+      connection.end();
+      
     }else if (amtNeeded > res[0].stock_quantity) {
       console.log("Insufficient quantity. Sorry, we do not have enough of " + res[0].product_name + " at this time to complete your order.");
     };

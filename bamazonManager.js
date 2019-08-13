@@ -2,6 +2,8 @@ var mysql = require("mysql");
 var inquirer = require("inquirer");
 var Table = require("cli-table");
 
+//var keys = require("./keys.js");
+
 var connection = mysql.createConnection({
     host: "localhost",
   
@@ -12,7 +14,8 @@ var connection = mysql.createConnection({
     user: "root",
   
     // Your password
-    password: keys.password,
+    //password: keys.password,
+    password: "L8n%)72Jrg^FM!a_",
     database: "bamazon"
   });
 
@@ -41,6 +44,23 @@ var connection = mysql.createConnection({
 
 function inquirerUpdates() {
     inquirer.prompt([{
-        
-    }])
-}
+      name:"action",
+		type: "list",
+		message: "Choose an option below to manage current inventory:",
+		choices: ["Restock Inventory", "Add New Product", "Remove An Existing Product"]
+	}]).then(function(answers){
+		switch(answers.action){
+			case 'Restock Inventory':
+				restockRequest();
+				break;
+			case 'Add New Product':
+				addRequest();
+				break;
+			case 'Remove An Existing Product':
+				removeRequest();
+				break;		
+		}
+	});
+};
+
+showProducts();

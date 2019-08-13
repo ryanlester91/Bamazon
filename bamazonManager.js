@@ -133,4 +133,25 @@ function addRequest(){
   	showProducts();
   };
 
+  function removeRequest(){
+    inquirer.prompt([{
+
+      name: "ID" ,
+      type: "input" ,
+      message: "Enter the item number of the item you want to delete from inventory."
+    }]).then(function(answer) {
+
+      var id = answer.ID;
+  		removeInventory(id); 
+    })
+  };
+  
+
+  function removeInventory(id){
+  	connection.query('DELETE FROM Products WHERE item_id = ' + id);
+  	showProducts();
+  };
+
+  
+
 showProducts();

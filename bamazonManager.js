@@ -42,7 +42,7 @@ var connection = mysql.createConnection({
   });
 }
 
-/*function inquirerUpdates() {
+function inquirerUpdates() {
     inquirer.prompt([{
       name:"action",
 		type: "list",
@@ -61,9 +61,9 @@ var connection = mysql.createConnection({
 				break;		
 		}
 	});
-};*/
+};
 
-function restockRequest() {
+/*function restockRequest() {
 inquirer.prompt([{
 
   name: "ID",
@@ -89,6 +89,48 @@ function restockInventory(ID, stock_quantity){
 
 		displayInventory(res);
 	});
-};
+};*/
+
+function addRequest(){
+  inquirer.prompt([{
+    name: "ID",
+    type: "input",
+    message: "What will the ID number of the item be?"
+  }, {
+
+    name: "Name",
+    type: "input",
+    message: "What is the name of the product you are adding to the inventory?"
+  },{
+
+    name: "Department",
+    type: "input",
+    message: "Which department will the product be located?"
+  },
+	{
+		name:"Price",
+		type:"input",
+		message:"What is the price for item?"
+	},
+	{
+		name:"Quantity",
+		type:"input",
+		message:"What is the quantity you would like to add?"
+	},
+
+  ]).then(function(answers) {
+    var id = answers.ID
+    var name = answers.Name;
+		var category = answers.Department;
+		var price = answers.Price;
+		var quantity = answers.Quantity;
+		buildNewItem(id,name,category,price,quantity); 
+	});
+  };
+
+  function buildNewItem(id,name,category,price,quantity){
+  	connection.query('INSERT INTO products (item_id,product_name,department_name,price,stock_quantity) VALUES("' + id + '","' + name + '","' + category + '",' + price + ',' + quantity +  ')');
+  	showProducts();
+  };
 
 showProducts();

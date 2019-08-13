@@ -24,8 +24,10 @@ When you select a particuar task on the select prompt, the request function will
 
 * Remove Existing Product: If you are pulling or discontinuing a product, all you will need to do is type in the ID number of the item. Upon pressing Enter, the table will update to erase that product and its data.
 
+* Restocking a Product:  (under construction)  When you are running low on a product, access the restock request and input the ID number of that particular item and input how much you want to add to the existing stock. The restock function will then add current and new arrival together in your table.
 
-    
+* View Inventory: Firing up the manager portal node will automatically display the full table.  Upon completion of a manager task, the table will reappear with the updates. 
+
 
 It is our pleasure to serve the customer!
 

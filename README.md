@@ -14,9 +14,18 @@ To run the customer interface please follow the steps below:
 	node bamazonCustomer.js
 
 
-The Manager portal gives you access to more store tasks:  add a product to inventory, view products that are low in stock, and view products for sale.
+The Manager portal gives you access to more store tasks:  add a product to inventory, remove an existing product, view products that are low in stock, and view products for sale.
 
-    node bamazonManager.js
+	node bamazonManager.js
+
+When you select a particuar task on the select prompt, the request function will open another prompt to clarify what you want to do:
+
+* Add New Product:  You will input one-by-one the info you want displayed (ID, product name, department, price, and how much is in stock).  What you input will then show up in the table.
+
+* Remove Existing Product: If you are pulling or discontinuing a product, all you will need to do is type in the ID number of the item. Upon pressing Enter, the table will update to erase that product and its data.
+
+
+    
 
 It is our pleasure to serve the customer!
 

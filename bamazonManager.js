@@ -42,7 +42,7 @@ var connection = mysql.createConnection({
   });
 }
 
-function inquirerUpdates() {
+/*function inquirerUpdates() {
     inquirer.prompt([{
       name:"action",
 		type: "list",
@@ -60,6 +60,34 @@ function inquirerUpdates() {
 				removeRequest();
 				break;		
 		}
+	});
+};*/
+
+function restockRequest() {
+inquirer.prompt([{
+
+  name: "ID",
+  type: "input",
+  message: "Enter the item number of the item you wish to restock."
+}, {
+  name: "Quantity",
+  type: "input",
+  message: "How many items would you like to add to the existing inventory?"
+}
+
+]).then(function(answers) {
+  var quantityAdded = answers.Quantity;
+  var IDProduct = answers.ID;
+  restockInventory(IDProduct, quantityAdded);
+});
+};
+
+function restockInventory(ID, stock_quantity){
+	connection.query('SELECT * FROM Products WHERE item_id = '+ID, function(err,res){
+		if(err){console.log(err)};
+		connection.query('UPDATE Products SET stock_quantity = stock_quantity + ' +stock_quantity+ 'WHERE item_id =' +item_id);
+
+		displayInventory(res);
 	});
 };
 

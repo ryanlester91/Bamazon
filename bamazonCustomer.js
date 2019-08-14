@@ -3,7 +3,7 @@ var inquirer = require("inquirer");
 var Table = require("cli-table");
 
 //Require and configure dotenv.
-require('dotenv').config()
+//require('dotenv').config()
 
 
 var keys = require("./keys.js");
@@ -18,6 +18,7 @@ var connection = mysql.createConnection({
     user: "root",
   
     // Your password
+    //password: process.env.MYSQL_PASSWORD,
     password: keys.password,
     database: "bamazon"
   });
@@ -25,6 +26,7 @@ var connection = mysql.createConnection({
   connection.connect(function(err) {
     if (err) throw err;
     console.log("Connected as id: " +connection.threadId);
+    //console.log(keys.password);
   });
   
   var showProducts = function() {

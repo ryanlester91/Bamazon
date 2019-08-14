@@ -1,5 +1,6 @@
 //console.log('this is loaded');
+require('dotenv').config();
 
-exports.password = {
-    password: process.env.password
+module.exports= {
+    password: process.env.MYSQL_PASSWORD
 };

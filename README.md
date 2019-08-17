@@ -3,6 +3,8 @@ A simple working Amazon-like storefront application using MySQL and node.js.
 
 ###Customer Portal
 
+![1_inventory-table](https://user-images.githubusercontent.com/50120534/63212738-e213e600-c0d6-11e9-813c-10ae6036fec1.png)
+
 Browse and choose from the list of products we have on sale in the customer portal. Enter the ID number of the product along with the quantity to make the purchase.  Bamazon is limited in what it has in stock, so a transaction that goes over our current inventory will cancel.
 
 To run the customer interface please follow the steps below:

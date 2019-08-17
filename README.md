@@ -19,6 +19,12 @@ Enter Item ID:  ![2_enterItemID](https://user-images.githubusercontent.com/50120
 
 How many? ![3_enterHowManyItems](https://user-images.githubusercontent.com/50120534/63214486-c7496d80-c0e6-11e9-93cc-f6bef4835f67.png)
 
+Transaction approved! 
+![4_TransactionApproved](https://user-images.githubusercontent.com/50120534/63214505-f233c180-c0e6-11e9-914f-f3234eadee63.png)
+
+When you input an ID that does not exist:
+![5_When-ID-Does-Not-Exist](https://user-images.githubusercontent.com/50120534/63214508-f5c74880-c0e6-11e9-8edc-cd1d62a582c2.png)
+
 The Manager portal gives you access to more store tasks:  add a product to inventory, remove an existing product, view products that are low in stock, and view products for sale.
 
 	node bamazonManager.js

@@ -13,6 +13,8 @@ To run the customer interface please follow the steps below:
 	node bamazonCustomer.js
 
 
+Enter Item ID:  ![2_enterItemID](https://user-images.githubusercontent.com/50120534/63212687-50a47400-c0d6-11e9-84c5-a19f37cbb7ea.png)
+
 The Manager portal gives you access to more store tasks:  add a product to inventory, remove an existing product, view products that are low in stock, and view products for sale.
 
 	node bamazonManager.js

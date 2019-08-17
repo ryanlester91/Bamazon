@@ -25,6 +25,7 @@ Transaction approved!
 When you input an ID that does not exist:
 ![5_When-ID-Does-Not-Exist](https://user-images.githubusercontent.com/50120534/63214508-f5c74880-c0e6-11e9-8edc-cd1d62a582c2.png)
 
+### Manager Portal
 The Manager portal gives you access to more store tasks:  add a product to inventory, remove an existing product, view products that are low in stock, and view products for sale.
 
 	node bamazonManager.js
@@ -36,8 +37,9 @@ When you select a particuar task on the select prompt, the request function will
 
 * Add New Product:  You will input one-by-one the info you want displayed (ID, product name, department, price, and how much is in stock).  What you input will then show up in the table.
 
-![7_Manager_answering-AddNewProduct-prompt onebyone](https://user-images.githubusercontent.com/50120534/63214533-39ba4d80-c0e7-11e9-82f1-e5b3323a36c8.png)
 ![8-manager_addnewproduct-select](https://user-images.githubusercontent.com/50120534/63214535-3cb53e00-c0e7-11e9-85b8-e3569f3a08c9.png)
+![7_Manager_answering-AddNewProduct-prompt onebyone](https://user-images.githubusercontent.com/50120534/63214533-39ba4d80-c0e7-11e9-82f1-e5b3323a36c8.png)
+
 
 * Remove Existing Product: If you are pulling or discontinuing a product, all you will need to do is type in the ID number of the item. Upon pressing Enter, the table will update to erase that product and its data.
 

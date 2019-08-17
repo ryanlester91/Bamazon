@@ -37,13 +37,23 @@ When you select a particuar task on the select prompt, the request function will
 
 * Add New Product:  You will input one-by-one the info you want displayed (ID, product name, department, price, and how much is in stock).  What you input will then show up in the table.
 
+Select:
 ![8-manager_addnewproduct-select](https://user-images.githubusercontent.com/50120534/63214535-3cb53e00-c0e7-11e9-85b8-e3569f3a08c9.png)
+
+Prompt questions one-by-one:
 ![7_Manager_answering-AddNewProduct-prompt onebyone](https://user-images.githubusercontent.com/50120534/63214533-39ba4d80-c0e7-11e9-82f1-e5b3323a36c8.png)
 
 
 * Remove Existing Product: If you are pulling or discontinuing a product, all you will need to do is type in the ID number of the item. Upon pressing Enter, the table will update to erase that product and its data.
 
+Select:
 ![9-manager_removeProduct-select](https://user-images.githubusercontent.com/50120534/63214537-3f179800-c0e7-11e9-880f-9659e3561f2c.png)
+
+Input ID of product you want to remove from table:
+![10-manager_removeProduct_inputID](https://user-images.githubusercontent.com/50120534/63214573-bd743a00-c0e7-11e9-984f-8cfc6393ad92.png)
+
+Removal successful:
+![11-manager_removeProduct_success](https://user-images.githubusercontent.com/50120534/63214574-bfd69400-c0e7-11e9-8fae-e067f5633c7b.png)
 
 * Restocking a Product:  (under construction)  When you are running low on a product, access the restock request and input the ID number of that particular item and input how much you want to add to the existing stock. The restock function will then add current and new arrival together in your table.
 
